@@ -76,7 +76,7 @@ An alternative to above approach is that we can initially check if we need to cr
 ```
 One thing to note is that the field for Singleton instance would be ```volatile``` in this case to prevent cache incoherent issues.
 
- - Read Modify Update
+#### Read Modify Update
 Another code pattern where we see a data race condition is where we are reading a value and based on certain conditions, making a decision to whether we would update a value or not. A simple example for this would be a ```HashMap``` where we add the value for a key if that key is not present. So, Thread 1 can initially checks the condition for if the key is present in map and enters the code block. Thread 2 checks the value for the key in the map and as Thread 1 has yet not added the value for key in map, Thread 2 also gets the access to enter the code block. Now both the threads add the value for same key, in-turn updating each other's value and resulting in data corruption.
 
 ```
