@@ -1,4 +1,6 @@
-# Java-Concurrency-Concepts
+# Core-CS-Concepts
+
+## Java Concurrency
 Various concepts related to Java multi-threading and concurrency
 
  - The Basics
