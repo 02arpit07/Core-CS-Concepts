@@ -1,5 +1,9 @@
 # Synchronization
 
+#### Types of processes:
+ - Cooperative Process (Share memory/buffer/code/resources/variable)
+ - Independent Process
+
 #### Typical flow of a concurrent system
 Multiple processes try to execute a piece of code and in order to do so they go through a flow of operations as below:
 ```
