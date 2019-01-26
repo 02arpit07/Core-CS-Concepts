@@ -3,6 +3,9 @@
 Operating system works as an interface between a user and the hardware. Primary goal of OS is to provide an easy way to the users to access hardware. 
 A throughput of an OS is number of tasks it executes per unit time. User mostly uses applications to interact with the hardware where OS acts as an interface between User and hardware. OS works through **System Call**
 
+#### Context Switch
+When a CPU switches from executing one process/thread, the CPU needs to save local data, program pointer etc for the current thread/process and load the local data, program pointer for the thread/process, it is going to start executing next. This may result in an overhead while switching between tasks.
+
 #### Major functionalities of an OS are:
  - Resource Management
  - Process Management through CPU Scheduling algorithms
