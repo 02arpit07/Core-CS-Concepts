@@ -46,3 +46,15 @@ Parameters passed to a function are copied and therefore act as local copy to th
 As functions are executed independently, they can be run on a separate CPU for each function call resulting in an easier parallel execution setup.
 
 Disadvantage to this pattern is understanding which function call we need to parallelize.
+
+## Single Threaded Systems
+Same threading is a model where a single threaded systems are scaled to N single threaded systems. It results in N single threaded systems running in parallel.
+
+Same threaded systems usually have one thread per CPU. It is different from multi-threaded system in a way that single threaded system does not share state with other threads. There is no shared memory which two threads access concurrently. 
+
+#### Load Balancing
+ - **Single Threaded Microservice:** Each microservice in your system can run on a single thread. As microservice by nature do not share data, a single threaded system is optimal for this case.
+ - **Services With Sharded Data:** If the system actually needs to share the data then the data can be sharded into multiple shards which each thread can access independently avoiding any data corruption.
+
+#### Thread Communication
+Threads communicate among one another through message passing. Whenever a thread wants to communicate with another thread then it passes a message to that thread as a byte sequence. The thread can receive the message by copying it and then reading it.
