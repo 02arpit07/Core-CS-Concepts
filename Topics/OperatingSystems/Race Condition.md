@@ -1,5 +1,5 @@
 # Race Condition
-A race condition occurs when multiple threads access the shared data and try to change it at same time resulting in data corruption.
+A race condition occurs when multiple threads access the shared data and try to change it at same time resulting in data corruption. The situation arises when result of multiple threads executing a section of code differs based on the execution order of the threads.
 
 ## Code patterns with high probability of race conditions
 Following are two code patterns with high chances of race condition. These patterns can take multiple forms in the business logic.
