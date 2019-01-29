@@ -110,3 +110,6 @@ class Counter {
 ```
 
 Here multiple threads can acquire the ```readLock``` but only one thread can hold the ```writeLock```.
+
+## Lock Reentrance
+Synchronized blocks in Java are reentrant. This means that if a Thread enters a synchronized block taking the lock on the monitor object of the synchronized blocks, the thread can enter other blocks synchronized on the same monitor object.
